@@ -47,19 +47,19 @@
         // First Train (pushed back 1 year to make sure it comes before current time)
         firstTrainConverted = moment(firstTrain, "HH:mm").subtract(1, "years");
         currentTime = moment();
-        console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+        console.log("Current time: " + moment(currentTime).format("hh:mm"));
         // Difference between the times
         diffTime = moment().diff(moment(firstTrainConverted), "minutes");
-        console.log("DIFFERENCE IN TIME: " + diffTime);
+        console.log("Difference in time: " + diffTime);
         // Time apart (remainder)
         remainder = diffTime % frequency;
         console.log(remainder);
         // Minute Until Train
         minutesAway = frequency - remainder;
-        console.log("MINUTES TILL TRAIN: " + minutesAway);
+        console.log("Minutes until next train: " + minutesAway);
         // Next Train
         nextTrain = moment().add(minutesAway, "minutes");
-        console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+        console.log("Arrival time: " + moment(nextTrain).format("hh:mm"));
 
 
         emptyInput();
