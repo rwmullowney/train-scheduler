@@ -58,7 +58,7 @@
         minutesAway = frequency - remainder;
         console.log("Minutes until next train: " + minutesAway);
         // Next Train
-        nextTrain = moment().add(minutesAway, "minutes");
+        nextTrain = moment().add(minutesAway, "minutes").format("hh:mm");
         console.log("Arrival time: " + moment(nextTrain).format("hh:mm"));
 
 
@@ -85,7 +85,7 @@
             // storing the snapshot.val() in a variable for convenience
             var sv = snapshot.val();
 
-            // // Console.loging the last user's data
+            // // Console.logging the last user's data
             // console.log(sv.trainName);
             // console.log(sv.destination);
             // console.log(sv.firstTrain);
